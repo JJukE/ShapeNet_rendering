@@ -24,3 +24,9 @@ python render_all.py --save_folder PATH_TO_SAVE --dataset_folder PATH_TO_3D_OBJ 
 - The number of image(20) is from [point-e](https://arxiv.org/abs/2212.08751)
 
 # Post-process to get Point Clouds
+
+Sample colored point cloud.
+
+Original code gets the point cloud with farthest point sampling, but it takes too much time.
+
+So I use random sampling, instead.
