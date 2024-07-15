@@ -59,7 +59,9 @@ for cat_id in cat_list:
 
         vd = BlenderViewData(rendered_zip_path)
         pc = PointCloud.from_rgbd(vd, args.num_images)
-        sampled_pc = pc.farthest_point_sample(args.num_pts)
+        
+        # sampled_pc = pc.farthest_point_sample(args.num_pts) # too long time
+        sampled_pc = pc.random_sample(args.num_pts)
         
         # with bf.BlobFile(os.path.join(out_dir_path, f"colored_pc_{args.num_pts}.ply"), "wb") as writer:
         #     sampled_pc.write_ply(writer)
