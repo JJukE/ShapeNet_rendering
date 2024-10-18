@@ -47,7 +47,7 @@ if args.cat_id == "02958343":
 for idx, model_id in enumerate(tqdm(model_ids)):
     out_dir_path = os.path.join(args.save_folder, args.cat_id, model_id)
 
-    # NOTE: This is for resuming. Check if the existing directories havae each zip file!
+    # NOTE: This is for resuming. Check if the existing directories have each zip file!
     if os.path.exists(out_dir_path):
         if len(os.listdir(out_dir_path)) == 1 and os.listdir(out_dir_path)[0].endswith(".zip"):
             continue
