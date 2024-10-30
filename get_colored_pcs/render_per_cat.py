@@ -50,6 +50,7 @@ for idx, model_id in enumerate(tqdm(model_ids)):
     # NOTE: This is for resuming. Check if the existing directories have each zip file!
     if os.path.exists(out_dir_path):
         if len(os.listdir(out_dir_path)) == 1 and os.listdir(out_dir_path)[0].endswith(".zip"):
+            print(f"Skipping {idx+1}th instance: {model_id}")
             continue
         elif len(os.listdir(out_dir_path)) == 0:
             out_zip_path = os.path.join(out_dir_path, f"rendered_images.zip")
